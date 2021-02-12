@@ -6,7 +6,7 @@ const { SubscriptionServer } = require('subscriptions-transport-ws');
 const { schema } = require('./schema')
 
 const app = express();
-app.use('graphql', graphqlHTTP({ schema }));
+app.use('/graphql', graphqlHTTP({ schema }));
 const server = createServer(app);
 
 server.listen(4500, () => {
